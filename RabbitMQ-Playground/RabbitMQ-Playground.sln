@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld_Producer", "HelloWorld\HelloWorld_Producer.csproj", "{C0E857B1-4058-4E3A-901C-9F0A590D3E3F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld_Producer", "HelloWorld_Producer\HelloWorld_Producer.csproj", "{C0E857B1-4058-4E3A-901C-9F0A590D3E3F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld_Consumer", "HelloWorld_Consumer\HelloWorld_Consumer.csproj", "{14263298-D4D9-4201-8BB1-4E8D3B94E1C0}"
 EndProject
