@@ -9,6 +9,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld_Consumer", "Hell
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 Hello World", "01 Hello World", "{A5A11147-D4AE-4118-A03A-57A7B8A1E922}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkQueue_Consumer", "WorkQueue_Consumer\WorkQueue_Consumer.csproj", "{A1A452E4-705D-4A39-A6BE-5479283C641D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkQueue_Producer", "WorkQueue_Producer\WorkQueue_Producer.csproj", "{7A8A7D86-5205-4A9F-95FC-0FE08D4207FD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 Work Queue", "02 Work Queue", "{CF419385-02F2-4A00-91A6-FDF2AAF610DC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +29,14 @@ Global
 		{14263298-D4D9-4201-8BB1-4E8D3B94E1C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14263298-D4D9-4201-8BB1-4E8D3B94E1C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14263298-D4D9-4201-8BB1-4E8D3B94E1C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1A452E4-705D-4A39-A6BE-5479283C641D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1A452E4-705D-4A39-A6BE-5479283C641D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1A452E4-705D-4A39-A6BE-5479283C641D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1A452E4-705D-4A39-A6BE-5479283C641D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A8A7D86-5205-4A9F-95FC-0FE08D4207FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A8A7D86-5205-4A9F-95FC-0FE08D4207FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A8A7D86-5205-4A9F-95FC-0FE08D4207FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A8A7D86-5205-4A9F-95FC-0FE08D4207FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -30,5 +44,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{C0E857B1-4058-4E3A-901C-9F0A590D3E3F} = {A5A11147-D4AE-4118-A03A-57A7B8A1E922}
 		{14263298-D4D9-4201-8BB1-4E8D3B94E1C0} = {A5A11147-D4AE-4118-A03A-57A7B8A1E922}
+		{A1A452E4-705D-4A39-A6BE-5479283C641D} = {CF419385-02F2-4A00-91A6-FDF2AAF610DC}
+		{7A8A7D86-5205-4A9F-95FC-0FE08D4207FD} = {CF419385-02F2-4A00-91A6-FDF2AAF610DC}
 	EndGlobalSection
 EndGlobal
