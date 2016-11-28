@@ -4,7 +4,7 @@ using System.Threading;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 
-namespace WorkQueue_Consumer
+namespace PubSub_Consumer
 {
     class Program
     {
@@ -15,30 +15,22 @@ namespace WorkQueue_Consumer
             {
                 using (var channel = connection.CreateModel())
                 {
-                    channel.QueueDeclare(queue: "task_queue",
-                        durable: true,
-                        exclusive: false,
-                        autoDelete: false,
-                        arguments: null);
+                    channel.ExchangeDeclare("logs", "fanout");
 
-                    channel.BasicQos(0, 1, false);
+                    var queueName = channel.QueueDeclare().QueueName;
+                    channel.QueueBind(queueName,"logs",routingKey:"");
 
-                    Console.WriteLine(" [*] Waiting for messages.");
+                    Console.WriteLine(" [*] Waiting for logs.");
 
                     var consumer = new EventingBasicConsumer(channel);
                     consumer.Received += (model, ea) =>
                     {
                         var body = ea.Body;
                         var message = Encoding.UTF8.GetString(body);
-                        Console.WriteLine($" [x] Received {message}");
-
-                        int dots = message.Split('.').Length - 1;
-                        Thread.Sleep(dots * 1000);
-                        Console.WriteLine(" [x] Done");
-                        channel.BasicAck(deliveryTag: ea.DeliveryTag, multiple: false);
+                        Console.WriteLine($" [x]  {message}");
                     };
-                    channel.BasicConsume(queue: "task_queue",
-                        noAck: false,
+                    channel.BasicConsume(queue: queueName,
+                        noAck: true,
                         consumer: consumer);
 
                     Console.WriteLine(" Press [enter] to exit.");
